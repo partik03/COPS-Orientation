@@ -1,6 +1,7 @@
-// import img from 'next/img';
+// import Image from 'next/img';
+import Image from 'next/image';
 import React, { useState } from 'react'
-// import styles from '../styles/Corousel.module.css'
+import styles from '../styles/Corousel.module.css'
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -43,14 +44,42 @@ const Corousel = () => {
         width: "100%",
         height: "60vh",
         }}>
-          <img src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2022/5/2022_5$largeimg_837079638.jpg" alt="5" />
+          <Image src="/4.jpeg" alt="5" width="1600" height="1000" />
         </SwiperSlide>
         <SwiperSlide style={{ backgroundPosition: "center",
         backgroundSize: "cover",
         width: "100%",
         height: "70vh",
         }}>
-          <img src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2022/5/2022_5$largeimg_837079638.jpg" alt="6" />
+          <Image src="/2.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/1.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/3.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/5.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/6.jpeg" alt="6" width="1600" height="1000" />
         </SwiperSlide>
       </Swiper>
         </>

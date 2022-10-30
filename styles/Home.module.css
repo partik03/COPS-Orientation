@@ -21,7 +21,7 @@
 .top_right{
   width: 50%;
   height: 100vh;
-  background: red;
+  /* background: red; */
 }
 .navbar{
   display: flex;
@@ -84,8 +84,18 @@
 .nav_btns button:hover{
   filter: brightness(1.2);
 }
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
 #name{
   font-family: 'Exo 2', sans-serif;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite normal;
 }
 .top_social{
   margin-top: 2rem;
@@ -128,13 +138,14 @@
 .card{
   background: #21272F;
   color: white;
-  width: 30%;
+  width: 90%;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 3vw;
+  box-shadow: 0rem 0rem 1rem black;
 }
 .cards{
   display: flex;
