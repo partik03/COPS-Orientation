@@ -1,18 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Head from "next/head";
+import { useRouter } from "next/router";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
 import { CgWebsite } from "react-icons/cg";
 import { FaEthereum } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import Corousel, { CorouselItem } from "../components/Corousel";
-import Skills from "../components/Skills";
-import Footer from "../components/Footer";
 import Typewriter from "typewriter-effect";
+import Card from "../components/Card";
+import Corousel from "../components/Corousel";
+import Footer from "../components/Footer";
+import Form from "../components/Form";
+import Navbar from "../components/Navbar";
+import Skills from "../components/Skills";
+import styles from "../styles/Home.module.css";
 export default function Home() {
   const router = useRouter();
   const path = router.pathname;
@@ -42,7 +43,7 @@ export default function Home() {
               className={styles.top_left}
             >
               <span style={{ fontSize: "1.8em" }}>
-                Hi, <span style={{ color: "#00BD95" }}>I'm</span>
+                Hi, <span style={{ color: "#00BD95" }}>We are</span>
               </span>{" "}
               <br /> <br />
               
@@ -59,10 +60,10 @@ export default function Home() {
                 <Typewriter
                 options={{
                   loop: true,
-                  
+
                 }}
                  onInit={(typewriter) => {
-                  typewriter.typeString('Partik Singh')
+                  typewriter.typeString('COPS')
                     .callFunction(() => {
                       console.log('String typed out!');
                     })
@@ -84,15 +85,13 @@ export default function Home() {
                   fontWeight: "bolder",
                 }}
               >
-                Full Stacks Web Developer,Blockchain Learner
+                Club of Programmers
               </span>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia laborum quo culpa! Illo quasi nemo odio repellat
-                voluptatem quam.
+                The programming club of IIT BHU.
               </p>
               <div className={styles.top_social}>
-                Check Out My
+                Check Out Our
                 <section className={styles.diamond_section}>
                   <motion.div
                     initial={{ opacity: 0, x: -100 }}
@@ -100,7 +99,7 @@ export default function Home() {
                     transition={{delay:0.5,type:"spring",stiffness:120,bounce:0.8,duration:2}}
                   className={styles.diamond}>
                     <a
-                      href="https://github.com/partik03"
+                      href="https://github.com/COPS-IITBHU"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -125,7 +124,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{delay:0.5,type:"spring",stiffness:120,bounce:0.8,duration:2}}
                   className={styles.diamond}>
-                    <a href="mailto:partikbumrah13508@gmail.com">
+                    <a href="mailto:iitbhu.copsgmail.com">
                       <HiOutlineMail />
                     </a>
                   </motion.div>
@@ -151,13 +150,13 @@ export default function Home() {
               fontSize: "1.8em",
             }}
           >
-            My{" "}
+            Our{" "}
             <span
               style={{
                 color: "#00BD95",
               }}
             >
-              Services
+              Verticals
             </span>
           </motion.span>
           <br />
@@ -171,7 +170,7 @@ export default function Home() {
               fontWeight: "bolder",
             }}
           >
-            What I do
+            What We do
           </motion.span>
           <div className={styles.cards}>
             <motion.div
@@ -189,8 +188,8 @@ export default function Home() {
             >
               <Card
                 icon={CgWebsite}
-                title="Web Development"
-                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
+                title="Software Development"
+                details="Software development refers to a set of computer science activities dedicated to the process of creating, designing, deploying and supporting software."
               />
             </motion.div>
             <motion.div
@@ -208,8 +207,9 @@ export default function Home() {
             >
               <Card
                 icon={FaEthereum}
-                title="BlockChain Development"
-                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
+                title="Machine Learining"
+                details="
+                Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy."
               />
             </motion.div>
             <motion.div
@@ -228,8 +228,8 @@ export default function Home() {
             >
               <Card
                 icon={BsGithub}
-                title="Open Source"
-                details="Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum quo culpa! Illo quasi nemo odio repellat voluptatem quam."
+                title="Competitive Programming"
+                details="Competitive programming is a mind sport usually held over the Internet or a local network, involving participants trying to program according to provided specifications. "
               />
             </motion.div>
           </div>
@@ -247,10 +247,7 @@ export default function Home() {
           </h2>
           <br />
           <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-            adipisci asperiores facilis mollitia alias quisquam saepe doloribus
-            expedita neque cupiditate ratione nulla minus, quos est perspiciatis
-            quas minima enim? Voluptatibus.
+            Club of Programmers is much beyond just coding behind the screen , We host several events ranging from our very own CSOC(COPS Summer of Code) CWOC(COPS Winter of Code) and COPS Week to Several Workshops and Webinars
           </span>
           <div className="w-full flex justify-center items-center">
           <Corousel />
@@ -263,13 +260,13 @@ export default function Home() {
               fontSize: "3em",
             }}
           >
-            My{" "}
+            Our{" "}
             <span
               style={{
                 color: "#00BD95",
               }}
             >
-              Skills
+              Tech Stack
             </span>
           </span>
           <motion.div
@@ -312,6 +309,9 @@ export default function Home() {
               <t /> to Come ...
             </span>
           </motion.div>
+        </section>
+        <section className="h-screen">
+              <Form/>
         </section>
         <section className="h-min">
           <Footer />

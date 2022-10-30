@@ -9,19 +9,17 @@ function Navbar() {
     <>
     <nav className={styles.navbar}>
     <div className={styles.nav_logo}>
-    Partik 
+COPS
     </div>
     <div className={styles.nav_links}>
     <ul>
            <li onClick={(e)=> {console.log(e)}}><Link href="#home"><a>Home</a></Link></li>
            <li><Link href="#about"><a>About</a></Link></li>
            <li><Link href="#projects">Projects</Link></li>
-           <li><Link href="/"><a>Resume</a></Link></li>
+           <li><Link href="/"><a>Contact Us</a></Link></li>
     </ul>
     </div>
-    <div className={styles.nav_btns}>
-    <button>DownLoad CV</button>
-    </div>
+    
 <AiOutlineMenuUnfold style={{
   fontSize:'2rem',
   // display:"none",

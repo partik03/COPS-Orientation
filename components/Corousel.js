@@ -1,44 +1,89 @@
-import {Splide,SplideSlide,SplideTrack} from "@splidejs/react-splide"
-import Image from "next/image"
-import '@splidejs/react-splide/css';
-const Carousel = () => {
-  return (
-    <Splide className="flex items-center" hasTrack={false} aria-label="My Favorite Images"
-    options={{
-        rewind: true,
-        perPage: 1,
-        gap: '1rem',
-        pagination: true,
-        type: 'loop',
-        autoplay: true,
-        interval: 3000,
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        resetProgress: true,
-        width: '100%',
-    }}
-    >
-        <SplideTrack>
-  <SplideSlide className="w-full flex justify-center items-center">
-   <Image src="/1.png" alt="Image 1"  height="600" width="1200"/>  
-  </SplideSlide>
-  <SplideSlide className="flex justify-center">
-  <Image src="/2.png" alt="Image 2" height="600" width="1200"/>
-
-  </SplideSlide>
-  <SplideSlide className="flex justify-center">
-  <Image src="/3.png" alt="Image3" height="300" width="600"/>
-
-  </SplideSlide>
-  </SplideTrack>
-  <div className="splide__arrows">
-    <button className="splide_arrow splide__arrow--prev" 
-    >Prev</button>
-    <button className="splide_arrow splide__arrow--next" 
-    >Next</button>
-  </div>
-</Splide>
-  )
+// import Image from 'next/img';
+import Image from 'next/image';
+import React, { useState } from 'react'
+import styles from '../styles/Corousel.module.css'
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import {Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow,Navigation,Keyboard, Autoplay, Pagination} from "swiper";
+const Corousel = () => {
+    return (
+        <>
+         <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={{ clickable: true ,enabled:true}}
+        navigation={true}
+        keyboard={{enabled:true}}
+        loop={true}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+        modules={[EffectCoverflow,Navigation,Keyboard,Autoplay,Pagination]}
+        className="mySwiper"
+        style={{
+        width: "100%",
+         paddingTop: "1vh",
+        paddingBottom: "1vh",}}
+      >
+        <SwiperSlide style={{ 
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "60vh",
+        }}>
+          <Image src="/4.jpeg" alt="5" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/2.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/1.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/3.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/5.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+        <SwiperSlide style={{ backgroundPosition: "center",
+        backgroundSize: "cover",
+        width: "100%",
+        height: "70vh",
+        }}>
+          <Image src="/6.jpeg" alt="6" width="1600" height="1000" />
+        </SwiperSlide>
+      </Swiper>
+        </>
+    )
+  
 }
-
-export default Carousel
+export default Corousel
